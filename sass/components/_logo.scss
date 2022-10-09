@@ -1,0 +1,31 @@
+.logo {
+    margin-right: 93px;
+}
+
+.logo,
+.word {
+    padding-top: 24px;
+
+    color: var(--text-color);
+
+    font-family: $secondaryFontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration-line: none;
+}
+
+.word {
+    color: var(--accent-color);
+}
+
+.second {
+    padding-top: 0;
+    margin-right: 0;
+    color: var(--background-main-color);
+}
+
+.secondary {
+    color: var(--accent-color);
+}

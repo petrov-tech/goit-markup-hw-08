@@ -1,0 +1,94 @@
+.content-title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.content-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--secondary-text-color);
+}
+
+
+
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--team-list-gap));
+    margin-top: calc(-1 * var(--team-list-gap));
+}
+
+.content-list>.card-filter {
+    flex-basis: calc(100% / 3 - var(--team-list-gap));
+    margin-left: var(--team-list-gap);
+    margin-top: var(--team-list-gap);
+}
+
+.card-filter {
+    box-shadow: border 1px solid var(--border-color);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+                    transition: box-shadow var(--time-duration) var(--cubic-bezier);
+    }
+}
+
+
+/* card */
+
+.link-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wraper {
+    padding: 20px 24px;
+
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+}
+
+.card-thumbs {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white-color);
+
+    opacity: 0;
+    transform: translateY(100%);
+
+    transition: transform var(--time-duration) var(--cubic-bezier),
+        opacity var(--time-duration) var(--cubic-bezier);
+}
+
+.card-filter:hover .card-overlay,
+.card-filter:focus .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}

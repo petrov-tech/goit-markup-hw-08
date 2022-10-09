@@ -1,0 +1,28 @@
+.clients-list {
+    display: flex;
+}
+
+.client-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--svg-color);
+    border-radius: 4px;
+    fill: var(--svg-color);
+
+    justify-content: center;
+    align-items: center;
+
+    transition: fill var(--time-duration) var(--cubic-bezier),
+        border-color var(--time-duration) var(--cubic-bezier);
+
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+                border-color: var(--accent-color);
+        }
+}
+
+.icon-client+.icon-client {
+    margin-left: 30px;
+}
