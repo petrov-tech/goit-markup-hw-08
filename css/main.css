@@ -245,12 +245,12 @@ img {
 }
 
 .logo {
+  padding-top: 24px;
   margin-right: 93px;
 }
 
 .logo,
 .word {
-  padding-top: 24px;
   color: var(--text-color);
   font-family: "Raleway";
   font-style: normal;
