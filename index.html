@@ -15,8 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
-    <!-- <link rel="stylesheet" href="./css/mobile.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <link rel="stylesheet" href="./css/mobile.min.css">
     
   </head>
 
@@ -67,10 +67,14 @@
           </li>
         </ul>
 
-        <button type="button" class="menu-button">
+        <button type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button>
             <svg width="40" height="40">
-              <use href="./images/symbol-defs.svg#mobile-menu"></use>
-              <use href="./images/symbol-defs.svg#mobile-close"></use>
+              <use href="./images/symbol-defs.svg#mobile-menu" class="icon-menu"></use>
+              <use href="./images/symbol-defs.svg#mobile-close" class="icon-cross"></use>
             </svg>
           </button>
       </div>
@@ -92,15 +96,17 @@
         <div class="container">
           <h2 class="visually-hidden">Наші переваги</h2>
           <ul class="advantages-list list">
-            <li class="item">
+              <li class="advantages-item">
               <div class="box">
-                <svg class="box-icon">
+                <svg
+                    width="70"
+                    height="70">
                   <use
                     href="./images/symbol-defs.svg#icon-antenna"
-                    width="70"
-                    height="70"
                   ></use>
                 </svg>
+              </div>
+              <div class="">
                 <h3 class="advantages-title">УВАГА ДО ДЕТАЛЕЙ</h3>
                 <p class="advantages-text">
                   Ідейні міркування, і навіть початок повсякденної роботи з
@@ -108,53 +114,53 @@
                 </p>
               </div>
             </li>
-            <li class="item">
+
+            <li class="advantages-item">
               <div class="box">
-                <svg class="box-icon">
+                <svg class="box-icon" width="70"
+                    height="70">
                   <use
                     href="./images/symbol-defs.svg#icon-clock"
-                    width="70"
-                    height="70"
                   ></use>
                 </svg>
-                <h3 class="advantages-title">ПУНКТУАЛЬНІСТЬ</h3>
+              </div>
+               <h3 class="advantages-title">ПУНКТУАЛЬНІСТЬ</h3>
                 <p class="advantages-text">
                   Завдання організації, особливо рамки і місце навчання кадрів
                   тягне у себе.
                 </p>
-              </div>
             </li>
-            <li class="item">
+            
+            <li class="advantages-item">
               <div class="box">
-                <svg class="box-icon">
+                <svg class="box-icon" width="70"
+                    height="70">
                   <use
                     href="./images/symbol-defs.svg#icon-diagram"
-                    width="70"
-                    height="70"
                   ></use>
                 </svg>
+              </div>
                 <h3 class="advantages-title">ПЛАНУВАННЯ</h3>
                 <p class="advantages-text">
                   Так само консультація з широким активом значною мірою
                   зумовлює.
                 </p>
-              </div>
             </li>
-            <li class="item">
+
+            <li class="advantages-item">
               <div class="box">
-                <svg class="box-icon">
+                <svg class="box-icon" width="70"
+                    height="70">
                   <use
                     href="./images/symbol-defs.svg#icon-astronaut"
-                    width="70"
-                    height="70"
                   ></use>
                 </svg>
+              </div>
                 <h3 class="advantages-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
                 <p class="advantages-text">
                   Значимість цих проблем настільки очевидна, що реалізація
                   планових завдань.
                 </p>
-              </div>
             </li>
           </ul>
         </div>
@@ -693,7 +699,7 @@
     </div>
 
 
-    <!-- <script src="./js/menu.js"></script> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,14 @@
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: fill var(--time-duration) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
