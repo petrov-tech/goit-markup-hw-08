@@ -1,0 +1,33 @@
+.social {
+    display: flex;
+    padding-bottom: 30px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-main-color);
+    fill: var(--svg-color);
+
+    transition: fill var(--time-duration) var(--cubic-bezier),
+        background-color var(--time-duration) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--white-color);
+    }
+}
+
+.social-item+.social-item {
+    margin-left: 10px;
+}
