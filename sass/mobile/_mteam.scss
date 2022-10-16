@@ -7,19 +7,47 @@
     margin: auto;
     list-style: none;
 
-   
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+            display: flex;
+                flex-wrap: wrap;
+                margin-left: calc(-1 * var(--team-list-gap));
+                    margin-top: calc(-1 * var(--team-list-gap));
+        }
 
-    
-    margin-left: calc(-1 * var(--team-list-gap));
-    margin-top: calc(-1 * var(--team-list-gap));
+                  @media screen and (min-width: 1200px) {
+                      display: flex;
+                      flex-wrap: wrap;
+                      margin-left: calc(-1 * var(--team-list-gap));
+                      margin-top: calc(-1 * var(--team-list-gap));
+                  }
+}
+
+.team-img {
+    @media screen and (max-width:768px) {
+        width:450px;
+    }
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
 }
 
 .team-list>.card {
-    flex-basis: calc(100% / 4 - var(--team-list-gap));
-    margin-left: var(--team-list-gap);
-    margin-top: var(--team-list-gap);
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        flex-basis: calc(100% / 2 - var(--team-list-gap));
+            margin-left: var(--team-list-gap);
+            margin-top: var(--team-list-gap);
+            }
+
+                         @media screen and (min-width: 1200px) {
+                             width: 354px;
+                             flex-basis: calc(100% / 4 - var(--team-list-gap));
+                             margin-left: var(--team-list-gap);
+                             margin-top: var(--team-list-gap);
+                         }
+
 }
 
 /* CARD */
@@ -28,6 +56,13 @@
     box-shadow: var(--card-shadow);
     border-radius: 0 0 4px 4px;
     overflow: hidden;
+
+}
+
+.card:not(:last-child) {
+    @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
 }
 
 
@@ -57,21 +92,3 @@
     line-height: 1.18;
     text-align: center;
 }
-
-
-
-
-
-
-// .team-list {
-//     display: flex;
-// }
-
-/* CARD SET */
-// .card-thumb {
-//     background-color: var(--background-main-color);
-// }
-
-// .card-content,
-// .box-social {
-// }

@@ -31,7 +31,7 @@
           
 
           
-          <ul class="site-nav list">
+          <ul class="site-nav list" data-menu>
             <li class="item item-current">
               <a href="./index.html" class="link current"
                 >Студія</a
@@ -500,7 +500,8 @@
     <!-- підвал -->
     <footer class="footer">
       <div class="container container-footer">
-        <div class="adress-box">
+        <div class="adress-wrap">
+          <div class="adress-box">
           <a lang="en" href="./index.html" class="logo second"
             ><span class="logo-word secondary">Web</span>Studio</a
           >
@@ -572,10 +573,12 @@
             </li>
           </ul>
         </div>
+        </div>
 
         <div class="subscribe">
-          <p class="subscribe-title">Підпишіться на розсилку</p>
-          <form class="">
+          <div class="subscribe-box">
+            <p class="subscribe-title">Підпишіться на розсилку</p>
+            <form class="subscribe-form">
             <label for="subscrible-email"></label>
             <input
               class="subscribe-window"
@@ -592,6 +595,7 @@
               </svg>
             </button>
           </form>
+          </div>
         </div>
       </div>
     </footer>

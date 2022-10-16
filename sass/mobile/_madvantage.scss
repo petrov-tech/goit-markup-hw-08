@@ -16,6 +16,10 @@
 
 .advantages {
 
+    @media screen and (min-width: 480px) {
+            padding-bottom: 60px;
+        }
+
 @media screen and (min-width: 768px) {
                 padding-bottom: 60px;
 }
@@ -58,11 +62,17 @@
 
     color: var(--secondary-text-color);
 
-    @media screen and (max-width: 480px), (max-width: 1200px){
-        padding-bottom: 30px;
+   
     }
 
-    }
+.advantages-item:not(:last-child){
+
+@media screen and (max-width:767px) {
+    padding-bottom: 30px;
+}
+
+}
+
 
 .box {
     display: flex;
