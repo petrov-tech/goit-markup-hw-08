@@ -5,7 +5,7 @@
 .adress-box {
     display: block;
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:1199px) {
         text-align: center;
     }
 
@@ -13,7 +13,10 @@
 }
 
 .address {
-    @media screen and (max-width:768px) {
+    margin-top: 20px;
+        font-style: inherit;
+
+    @media screen and (max-width:767px) {
         display: flex;
         justify-content: center;
     }
@@ -46,7 +49,7 @@
     text-decoration-line: none;
     transition: color var(--time-duration) var(--cubic-bezier);
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
             display: flex;
             justify-content: center;
         }
@@ -56,10 +59,10 @@
     margin-bottom: 9px;
 }
 
-.address {
-    margin-top: 20px;
-    font-style: inherit;
-}
+// .address {
+//     margin-top: 20px;
+//     font-style: inherit;
+// }
 
 .adress-link {
     font-size: 14px;
@@ -82,7 +85,7 @@
     padding-top: 12px;
     
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
            margin-left: 0;
            padding-top: 60px;
            padding-bottom: 60px;
@@ -100,7 +103,7 @@
 
     color: var(--white-color);
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1199px) {
         text-align: center;
         }
 }
@@ -110,7 +113,7 @@
     padding-bottom: 0;
     margin: 0;
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
             justify-content: center;
         }
 }
@@ -144,14 +147,14 @@
 .subscribe {
     margin-left: 70px;
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1199px) {
             margin-left: 0;
         }
 }
 
 .subscribe-form {
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1199px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -173,7 +176,7 @@
 
     color: var(--white-color);
 
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width:1199px) {
             text-align: center;
            padding-top: 0;
         }
@@ -197,7 +200,7 @@
         border: 1px solid var(--accent-color);
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
         width: 100%;
         margin-bottom: 20px;
     }

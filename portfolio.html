@@ -15,24 +15,39 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <link rel="stylesheet" href="./css/mobile.min.css">
+
   </head>
 
   <body>
     <!-- Header -->
     <header class="header header-line">
       <div class="container container-header">
-        <!-- Navigation -->
-        <nav class="main-nav">
+        
           <a lang="en" href="./index.html" class="logo">
             <span class="word">Web</span>Studio
           </a>
+          
+          <button type="button"
+            class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg width="40" height="40">
+              <use href="./images/symbol-defs.svg#mobile-menu"></use>
+              <!-- <use href="./images/symbol-defs.svg#mobile-close" class="icon-cross"></use> -->
+            </svg>
+          </button>
 
+      <div class="main-menu">
+        <nav class="main-nav">
           <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link item-currents">Студія</a>
-            </li>
             <li class="item item-current">
+              <a href="./index.html" class="link item-currents"
+                >Студія</a
+              >
+            </li>
+            <li class="item">
               <a href="./portfolio.html" class="link current"
                 >Портфоліо</a
               >
@@ -43,7 +58,6 @@
           </ul>
         </nav>
 
-        <!-- Contact list -->
         <ul class="contact list">
           <li class="item icon-mail">
             <a href="mailto:info@devstudio.com" class="links">
@@ -63,6 +77,56 @@
           </li>
         </ul>
       </div>
+      </div>
+
+      <!-- mobile menu -->
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+            <button type="button"
+              class="menu-toggle js-close-menu">
+              <svg width="40" height="40">
+              <use href="./images/symbol-defs.svg#mobile-close"></use>
+            </svg>
+          </button>
+
+            <ul class="mobile-menu">
+            <li class="mobile-item item-current">
+              <a href="./index.html" class="link item-currents"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-item">
+              <a href="./portfolio.html" class="link current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-item">
+              <a href="" class="link item-currents">Контакти</a>
+            </li>
+          </ul>
+
+        <ul class="mobile-contacts list">
+          <li class="mobile-tell">
+            <a href="tel:+380961111111" class="link">
+            +38 096 111 11 11</a
+            >
+          </li>   
+
+          <li class="mobile-mail">
+            <a href="mailto:info@devstudio.com" class="link">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="menu-social">
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">LinkedIn</a></li>
+        </ul>
+
+          </div>
     </header>
 
     <!-- Main section -->
@@ -305,7 +369,8 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container container-footer">
-        <div class="adress-box">
+        <div class="adress-wrap">
+          <div class="adress-box">
           <a lang="en" href="./index.html" class="logo second"
             ><span class="logo-word secondary">Web</span>Studio</a
           >
@@ -332,7 +397,6 @@
           </address>
         </div>
 
-        <!-- social footer -->
         <div class="box-social-footer">
           <p class="text-footer">приєднуйтесь</p>
           <ul class="social-footer list">
@@ -378,11 +442,12 @@
             </li>
           </ul>
         </div>
+        </div>
 
-        <!-- subscribe footer -->
         <div class="subscribe">
-          <p class="subscribe-title">Підпишіться на розсилку</p>
-          <form class="">
+          <div class="subscribe-box">
+            <p class="subscribe-title">Підпишіться на розсилку</p>
+            <form class="subscribe-form">
             <label for="subscrible-email"></label>
             <input
               class="subscribe-window"
@@ -399,9 +464,17 @@
               </svg>
             </button>
           </form>
+          </div>
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
