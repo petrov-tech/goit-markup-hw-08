@@ -78,7 +78,10 @@
       <!-- mobile menu -->
 
       <div class="menu-container js-menu-container" id="mobile-menu">
-        <button type="button" class="menu-toggle js-close-menu">
+        <button type="button"
+          class="menu-toggle js-close-menu"
+          aria-label="menuclose"
+          >
           <svg width="40" height="40">
             <use href="./images/symbol-defs.svg#mobile-close"></use>
           </svg>
@@ -648,7 +651,8 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="btn-close">
-          <button class="close" data-modal-close>
+          <button class="close" data-modal-close
+          aria-label="modalclose">
             <svg width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
