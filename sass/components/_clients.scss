@@ -1,10 +1,14 @@
 .clients-list {
     display: flex;
+        flex-wrap: wrap;
+
+        margin-left: calc(-1 * var(--team-list-gap));
+            margin-top: calc(-1 * var(--team-list-gap));
 }
 
 .client-link {
     display: flex;
-    width: 170px;
+    width: 100%;
     height: 92px;
     border: 1px solid var(--svg-color);
     border-radius: 4px;
@@ -16,13 +20,49 @@
     transition: fill var(--time-duration) var(--cubic-bezier),
         border-color var(--time-duration) var(--cubic-bezier);
 
-        &:hover,
-        &:focus {
-            fill: var(--accent-color);
-                border-color: var(--accent-color);
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+
+    @media screen and (max-width:768px) {
+        max-width: 210px;
+            height: 92px;
+            
+    }
+
+        @media screen and (min-width:768px) {
+            width: 226px;
+            height: 92px;
         }
+
+                @media screen and (min-width:1200px) {
+                    width: 170px;
+                    height: 92px;
+                }
 }
 
-.icon-client+.icon-client {
-    margin-left: 30px;
+
+.icon-client {
+
+    @media screen and (max-width:768px) {
+        flex-basis: calc(100% / 2 - var(--team-list-gap));
+            margin-left: var(--team-list-gap);
+            margin-top: var(--team-list-gap);
+    }
+
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 3 - var(--team-list-gap));
+            margin-left: var(--team-list-gap);
+            margin-top: var(--team-list-gap);
+    }
+
+         @media screen and (min-width: 1200px) {
+             flex-basis: calc(100% / 6 - var(--team-list-gap));
+             margin-left: var(--team-list-gap);
+             margin-top: var(--team-list-gap);
+         }
 }

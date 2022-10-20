@@ -5,16 +5,14 @@ body {
 
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width:767px) {
+        padding-top: 60px;
+    }
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.practice__image {
-    display: block;
+body.modal-open {
+    overflow: hidden;
 }
 
 .list {
@@ -24,19 +22,31 @@ img {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
 .visually-hidden {
     position: absolute;
@@ -49,11 +59,6 @@ img {
     overflow: hidden;
 }
 
-
-.main {
-    padding-bottom: 94px;
-}
-
 .practice__title,
 .team-title,
 .clients-title {
@@ -63,5 +68,29 @@ img {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+
+    @media screen and (max-width:767px) {
+      
+            margin-bottom: 30px;
+        
+    }
 }
 
+.section {
+
+    @media screen and (max-width:767px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+                 @media screen and (min-width:768px) {
+                     padding-top: 60px;
+                     padding-bottom: 60px;
+                 }
+
+    @media screen and (min-width:1200px) {
+            padding-top: 94px;
+                padding-bottom: 94px;
+    }
+
+}
