@@ -219,6 +219,21 @@
     cursor: pointer;
 }
 
+.icon-envelope {
+@media screen and (max-width:1199px) {
+    width: 14px;
+    height: 10px;
+}
+}
+
+.icon-tell {
+    @media screen and (max-width:1199px) {
+        width: 10px;
+        height: 14px;
+    }
+}
+
+
 .contact .links:hover,
 .contact .links:focus,
 .contact-link:hover,

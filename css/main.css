@@ -391,6 +391,20 @@ img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .icon-envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .icon-tell {
+    width: 10px;
+    height: 14px;
+  }
+}
+
 .contact .links:hover,
 .contact .links:focus,
 .contact-link:hover,
