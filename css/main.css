@@ -845,11 +845,15 @@ img {
 }
 
 .hero-bcg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
   max-width: 1600px;
   height: 600px;
   background-color: var(--footer-backgound);
