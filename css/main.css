@@ -757,6 +757,17 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .filter {
+    max-width: 340px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 25px;
+  }
+}
 
 .filter__button {
   display: inline-block;
@@ -785,9 +796,14 @@ img {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+@media screen and (max-width: 767px) {
+  .filter__button {
+    margin-bottom: 15px;
+  }
+}
 
-.filter .filter__btn + .filter__btn {
-  margin-left: 8px;
+.filter__btn:not(:last-child) {
+  margin-right: 8px;
 }
 
 .btn-close {
@@ -1799,19 +1815,23 @@ textarea {
 }
 
 .content-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: calc(-1 * var(--team-list-gap));
   margin-top: calc(-1 * var(--team-list-gap));
 }
-@media screen and (min-width: 768px) {
-  .content-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+
+@media screen and (max-width: 767px) {
+  .content-list > .card-filter {
+    -ms-flex-preferred-size: calc(100% - var(--team-list-gap));
+        flex-basis: calc(100% - var(--team-list-gap));
+    margin-left: var(--team-list-gap);
+    margin-top: var(--team-list-gap);
   }
 }
-
 @media screen and (min-width: 768px) {
   .content-list > .card-filter {
     -ms-flex-preferred-size: calc(50% - var(--team-list-gap));
@@ -1841,9 +1861,22 @@ textarea {
   transition: box-shadow var(--time-duration) var(--cubic-bezier);
   transition: box-shadow var(--time-duration) var(--cubic-bezier), -webkit-box-shadow var(--time-duration) var(--cubic-bezier);
 }
+@media screen and (max-width: 767px) {
+  .card-filter {
+    max-width: 450px;
+  }
+}
 
 /* card */
 .link-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -1853,6 +1886,9 @@ textarea {
   max-width: 100%;
   background: var(--white-color);
   border: 1px solid var(--border-color);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .card-thumbs {

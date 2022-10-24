@@ -21,17 +21,22 @@
 
 
 .content-list {
+    display: flex;
+        flex-wrap: wrap;
+
+
     
     margin-left: calc(-1 * var(--team-list-gap));
     margin-top: calc(-1 * var(--team-list-gap));
-
-    @media screen and (min-width:768px) {
-        display: flex;
-            flex-wrap: wrap;
-    }
 }
 
 .content-list>.card-filter {
+@media screen and (max-width:767px) {
+        flex-basis: calc(100% / 1 - var(--team-list-gap));
+        margin-left: var(--team-list-gap);
+        margin-top: var(--team-list-gap);
+    }
+
         @media screen and (min-width:768px) {
                 flex-basis: calc(100% / 2 - var(--team-list-gap));
                 margin-left: var(--team-list-gap);
@@ -55,12 +60,19 @@
             1px 4px 6px rgba(0, 0, 0, 0.16);
         transition: box-shadow var(--time-duration) var(--cubic-bezier);
     }
+
+    @media screen and (max-width:767px) {
+        max-width: 450px;
+    }
 }
 
 
 /* card */
 
 .link-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
     color: inherit;
 }
@@ -71,11 +83,17 @@
 
     background: var(--white-color);
     border: 1px solid var(--border-color);
+
+    flex-grow: 1;
 }
 
 .card-thumbs {
     position: relative;
     overflow: hidden;
+
+    // @media screen and (max-width:767px) {
+    //         max-width: 450px;
+    //     }
 }
 
 .card-overlay {
