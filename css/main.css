@@ -331,7 +331,7 @@ img {
             flex-direction: row;
   }
 }
-@media screen and (min-width: 480x) {
+@media screen and (min-width: 480px) {
   .contact .item:not(:last-child) {
     padding-bottom: 0;
   }

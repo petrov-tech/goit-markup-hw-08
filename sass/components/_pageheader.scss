@@ -163,7 +163,7 @@
     }
 
     & .item:not(:last-child) {
-        @media screen and (min-width: 480x) {
+        @media screen and (min-width: 480px) {
                 padding-bottom: 0;
             }
         
